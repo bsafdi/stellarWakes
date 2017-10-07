@@ -27,4 +27,4 @@ make build
 
 ## Examples
 
-An example of how to use `stellarContrails` is provided in the `examples/` folder in the form of a `jupyter` notebook.  That notebook uses example stellar kinematic data, with and without a subhalo, provided in the `data/` folder.  
+An example of how to use `stellarContrails` is provided in the `examples/` folder in the form of a `jupyter` notebook.  That notebook uses example stellar kinematic data, with and without a subhalo, provided in the `examples/data/` folder.  
