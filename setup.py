@@ -1,0 +1,38 @@
+from __future__ import print_function
+
+import logging
+from setuptools import setup
+from distutils.extension import Extension
+from Cython.Build import cythonize
+import numpy
+import cython_gsl
+
+
+extensions = [
+    Extension("stellarContrails.LL", ["stellarContrails/LL.pyx"],
+        include_dirs=[numpy.get_include(),cython_gsl.get_cython_include_dir()], extra_compile_args=["-ffast-math",'-O3',"-march=native"],libraries=cython_gsl.get_libraries())
+]
+
+setup_args = {'name':'stellarContrails',
+    'version':'0.0',
+    'description':'A Python package for DM subhalo searches using stellar contrails',
+    'url':'https://github.com/bsafdi/stellarContrails',
+    'author':'Benjamin R. Safdi',
+    'author_email':'bsafdi@umich.edu',
+    'license':'MIT',
+    'install_requires':[
+            'numpy',
+            'matplotlib',
+            'healpy',
+            'Cython',
+            'pymultinest',
+            'jupyter',
+            'scipy',
+            'CythonGSL',
+        ]}
+
+setup(packages=['stellarContrails'],
+    ext_modules = cythonize(extensions),
+    **setup_args
+)
+print("Compilation successful!")
