@@ -9,14 +9,14 @@ import cython_gsl
 
 
 extensions = [
-    Extension("stellarContrails.LL", ["stellarContrails/LL.pyx"],
+    Extension("stellarWakes.*", ["stellarWakes/*.pyx"],
         include_dirs=[numpy.get_include(),cython_gsl.get_cython_include_dir()], extra_compile_args=["-ffast-math",'-O3',"-march=native"],libraries=cython_gsl.get_libraries())
 ]
 
-setup_args = {'name':'stellarContrails',
+setup_args = {'name':'stellarWakes',
     'version':'0.0',
-    'description':'A Python package for DM subhalo searches using stellar contrails',
-    'url':'https://github.com/bsafdi/stellarContrails',
+    'description':'A Python package for DM subhalo searches using stellar wakes',
+    'url':'https://github.com/bsafdi/stellarWakes',
     'author':'Benjamin R. Safdi',
     'author_email':'bsafdi@umich.edu',
     'license':'MIT',
@@ -31,7 +31,7 @@ setup_args = {'name':'stellarContrails',
             'CythonGSL',
         ]}
 
-setup(packages=['stellarContrails'],
+setup(packages=['stellarWakes'],
     ext_modules = cythonize(extensions),
     **setup_args
 )
