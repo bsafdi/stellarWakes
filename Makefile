@@ -1,6 +1,6 @@
 clean:
 	rm -rf build
-	rm -f contrails/*.so
+	rm -f stellarWakes/*.so
 
 build: clean
 	python setup.py build_ext --inplace
