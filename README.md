@@ -9,7 +9,7 @@ This code uses stellar kinematic data to search for dark matter (DM) subhalos th
 - Benjamin R. Safdi; bsafdi at umich dot edu
 - Chih-Liang Wu; cliang at mit.edu
 
-If you make use of `stellarWakes` in a publication, please cite 1711.03554.
+If you make use of `stellarWakes` in a publication, please cite [1711.03554](https://arxiv.org/pdf/1711.03554.pdf).
 
 ## Compiling and Running
 
