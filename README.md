@@ -1,5 +1,8 @@
 # stellarWakes
 
+[![arXiv](https://img.shields.io/badge/arXiv-1711.03554%20-green.svg)](https://arxiv.org/abs/1711.03554)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This code uses stellar kinematic data to search for dark matter (DM) subhalos through their gravitational perturbations to the stellar phase-space distribution.
 
 ## Authors
